@@ -1,0 +1,126 @@
+:root {
+  --nav-color: #035755;
+  --background-clr: #c99de721;
+  --font-family: "Red Hat Display", "serif";
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-clr) !important;
+}
+
+
+.header {
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
+.header .nav-img {
+  margin-bottom: 20px;
+  width: 191;
+  height: 65;
+  font-size: 25px;
+}
+
+.header .nav-img span{
+  font-size: 23px;
+}
+
+.header .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .nav-menu .nav-links__item {
+  position: relative;
+  text-decoration: none;
+  color: var(--nav-color);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.header .nav-menu .nav-links__item:hover {
+  color: #000000;
+}
+
+.header .nav-menu .nav-links__item.active {
+  color: #FB4C47;
+  pointer-events: none;
+}
+
+
+.header .nav-menu .nav-links__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.header .nav-links__item {
+  text-decoration: none;
+  color: var(--nav-color);
+  margin-left: 10px;
+}
+
+.input__text {
+  text-align: center;
+  margin: auto;
+}
+
+.kart-main {
+  background-color: rgba(228, 135, 135, 0.082);
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kart {
+  background-color: rgba(255, 0, 0, 0.171);
+  max-width: 400px;
+  padding: 10px 25px;
+}
+
+.kart__desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
+@media screen and (min-width: 768px) {
+  .header .nav-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .nav-menu .nav-links__item.active::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #FA5652;
+    border-radius: 100%;
+    left: 50%;
+    top: 32px;
+  }
+  
+}
